@@ -19,6 +19,18 @@ The objective is to create a resilient infrastructure capable of handling high-t
 
 ---
 
+### **Architecture**
+![Architecture Diagram](tools_infra_project\image\Architecture.png)
+
+---
+
+### **Grafana Dashboard Example**
+Below is an example of the real-time data visualization in **Grafana** that tracks the `request_processing_seconds_count` for the API service:
+
+![Grafana Dashboard](tools_infra_project\image\Grafana.png)
+
+---
+
 ### **Technologies Used**
 - **Programming Languages**: Python, Shell scripting, YAML
 - **Containerization**: Docker
@@ -46,7 +58,7 @@ Ensure you have the following tools installed:
 
 #### **1. Clone the Repository**
 ```bash
-git clone https://github.com/MirisanRavindran/Tools-Infrastructure-for-Debugging-and-Performance-Tuning.git
+git clone https://github.com/yourusername/tools-infra-performance.git
 cd tools-infra-performance
 ```
 
@@ -134,4 +146,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 ### **Contact**
-For questions or contributions, contact Mirisan Ravindran at [mirisan003@gmail.com].
+For questions or contributions, contact [Your Name] at [email@example.com].
