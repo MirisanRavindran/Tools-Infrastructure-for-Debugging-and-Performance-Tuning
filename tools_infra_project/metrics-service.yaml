@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: metrics-service
+spec:
+  replicas: 2  # Number of pods
+  selector:
+    matchLabels:
+      app: metrics
+  template:
+    metadata:
+      labels:
+        app: metrics
+    spec:
+      containers:
+      - name: metrics-service
+        image: metrics-service  # Docker image of your metrics service
+        ports:
+        - containerPort: 5001  # Expose the port where your metrics service is running
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: metrics-service
+spec:
+  type: NodePort  # Make this service available outside of the cluster
+  ports:
+    - port: 5001  # Internal port for the service
+      nodePort: 30001  # External port
+  selector:
+    app: metrics

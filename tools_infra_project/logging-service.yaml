@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: logging-service
+spec:
+  replicas: 1  # Only 1 replica needed for logging
+  selector:
+    matchLabels:
+      app: logging
+  template:
+    metadata:
+      labels:
+        app: logging
+    spec:
+      containers:
+      - name: logging-service
+        image: logging-service  # Docker image of your logging service
+        ports:
+        - containerPort: 24224  # Fluentd listens on this port
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: logging-service
+spec:
+  type: NodePort  # Make this service available outside the cluster
+  ports:
+    - port: 24224  # Internal port for Fluentd
+      nodePort: 30002  # External port
+  selector:
+    app: logging
