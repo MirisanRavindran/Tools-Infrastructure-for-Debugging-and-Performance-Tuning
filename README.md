@@ -20,14 +20,14 @@ The objective is to create a resilient infrastructure capable of handling high-t
 ---
 
 ### **Architecture**
-![Architecture Diagram](tools_infra_project\image\Architecture.png)
+![Architecture Diagram](tools_infra_project/image/Architecture.png)
 
 ---
 
 ### **Grafana Dashboard Example**
 Below is an example of the real-time data visualization in **Grafana** that tracks the `request_processing_seconds_count` for the API service:
 
-![Grafana Dashboard](tools_infra_project\image\Grafana.png)
+![Grafana Dashboard](tools_infra_project/image/Grafana.png)
 
 ---
 
@@ -146,4 +146,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 ### **Contact**
-For questions or contributions, contact [Your Name] at [email@example.com].
+For questions or contributions, contact Mirisan Ravindran at mirisan003@gmail.com.
